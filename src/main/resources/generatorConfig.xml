@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+	  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+	  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	    <properties resource="generatorConfig.properties"/>
+		<!--<classPathEntry
+		location="${generatorConfig.classPathEntry}" />
+			 	
+ -->
+	<classPathEntry
+		location="E:\.m2\repository\mysql\mysql-connector-java\5.1.27\mysql-connector-java-5.1.27.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+ 
+ 		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+       	<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.50.68:3306/51ism_dev?generateSimpleParameterMetadata=true"
+			userId="51ism_dev" password="51ism_dev_pwd">
+		</jdbcConnection>-->
+		
+		<jdbcConnection driverClass="${generatorConfig.driverClass}"
+			connectionURL="${generatorConfig.connectionURL}"
+			userId="${generatorConfig.userId}" password="${generatorConfig.password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- generate Model -->
+		<javaModelGenerator targetPackage="com.mhw.example.model"
+			targetProject="${generatorConfig.targetProject}">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+
+		<sqlMapGenerator targetPackage="mappings"
+			targetProject="${generatorConfig.mappingtargetProject}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.mhw.example.dao" targetProject="${generatorConfig.targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table schema=""  tableName="ism_fund_temp" domainObjectName="FundTempIsmBean">
+			<columnOverride column="fund_open_date_txt" jdbcType="VARCHAR" />
+		</table>
+	</context>
+</generatorConfiguration>

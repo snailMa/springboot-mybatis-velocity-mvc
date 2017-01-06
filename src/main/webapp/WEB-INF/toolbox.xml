@@ -1,0 +1,12 @@
+<tools>
+	<toolbox scope="application">
+		<tool key="valueRange" class="com.mhw.example.common.velocity.tools.ValueRange" />
+		<tool key="tool" class="com.mhw.example.common.velocity.tools.VelocityTool"/>
+		<tool key="date" class="org.apache.velocity.tools.generic.DateTool"/>
+		<tool key="display" class="org.apache.velocity.tools.generic.DisplayTool"/>
+		<tool key="math" class="org.apache.velocity.tools.generic.MathTool"/>
+		<tool key="iter" class="org.apache.velocity.tools.generic.IteratorTool"/>
+		<tool key="sort" class="org.apache.velocity.tools.generic.SortTool"/>
+		<tool key="NumberTool" class="org.apache.velocity.tools.generic.NumberTool"/>
+	</toolbox>
+</tools>

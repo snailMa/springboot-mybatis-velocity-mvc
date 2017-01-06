@@ -1,0 +1,32 @@
+server.port: 8080
+spring.application.name: webchat
+spring.config.name: webchat
+spring.application.version: 0.1.0
+spring.boot.admin.url: http://localhost:8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.78.112:3306/im_urgent?useUnicode=true&characterEncoding=utf-8
+    username: im_urgent
+    password: im_urgent_pwd
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 30
+    min-idle: 5
+    initial-size: 5
+    maxWait: 60000
+    testOnBorrow: false
+    testOnReturn: false
+  velocity:
+    charset: UTF-8
+    suffix: .html
+    toolbox-config-location: /WEB-INF/toolbox.xml
+    resourceLoaderPath: /WEB-INF/velo/
+    properties:
+      input:
+        encoding: UTF-8
+      output:
+        encoding: UTF-8
+
+mybatis:
+  typeAliasesPackage: com.mhw.example.model.*
+  mapperLocations: classpath:mapping/*.xml
