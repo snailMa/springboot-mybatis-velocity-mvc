@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * Created by mahw on 2017/1/4.
  */
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 @SpringBootApplication
-@ComponentScan(basePackages = "com.mhw.example.controller,com.mhw.example.service")
+@ComponentScan(basePackages = "com.mhw.example.configuration,com.mhw.example.controller,com.mhw.example.service")
 @MapperScan(basePackages = "com.mhw.example.dao")
 @EnableCaching
 public class Application {

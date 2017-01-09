@@ -2,7 +2,7 @@ server.port: 8080
 spring.application.name: webchat
 spring.config.name: webchat
 spring.application.version: 0.1.0
-spring.boot.admin.url: http://localhost:8080
+spring.boot.admin.url: http://localhost:8181
 
 spring:
   datasource:
@@ -27,6 +27,8 @@ spring:
       output:
         encoding: UTF-8
 
-mybatis:
-  typeAliasesPackage: com.mhw.example.model.*
-  mapperLocations: classpath:mapping/*.xml
+#mybatis:
+#  typeAliasesPackage: com.mhw.example.model.*
+#  mapperLocations: classpath:mapping/*.xml
+  
+#security.basic.enabled: false

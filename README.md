@@ -1,3 +1,5 @@
-框架整合spring-boot、mybatis、velocity
-项目管理工具maven
-使用mybatis自动生成dao、mapper、model的插件mybatisGenerator
+v0.02
+闆嗘垚spring-security
+
+v0.01
+妗嗘灦鏁村悎spring-boot銆乵ybatis銆乿elocity 椤圭洰绠＄悊宸ュ叿maven 浣跨敤mybatis鑷姩鐢熸垚dao銆乵apper銆乵odel鐨勬彃浠秏ybatisGenerator
